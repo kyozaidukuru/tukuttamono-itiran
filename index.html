@@ -6,13 +6,18 @@
   <style>
     body {
       font-family: sans-serif;
-      background: #f5f6f8;
+      background: #f0f7f0; /* 薄い黄緑 */
       margin: 0;
       padding: 20px;
     }
 
+    h1 {
+      color: #2f5d2f;
+    }
+
     h2 {
       margin-top: 40px;
+      color: #3a6b3a;
     }
 
     .section {
@@ -22,7 +27,7 @@
     .card {
       display: flex;
       gap: 16px;
-      background: white;
+      background: #ffffff;
       border-radius: 16px;
       padding: 16px;
       margin-top: 12px;
@@ -39,7 +44,7 @@
       height: 80px;
       border-radius: 8px;
       object-fit: cover;
-      background: #ddd;
+      background: #d8e8d8;
     }
 
     .content {
@@ -49,7 +54,7 @@
     .title {
       font-size: 18px;
       font-weight: bold;
-      color: #0366d6;
+      color: #2f7d32;
       text-decoration: none;
     }
 
@@ -90,27 +95,25 @@ const data = [
     ]
   },
   {
- {
-  category: "漢字",
-  items: [
-    {
-      title: "漢字のまど",
-      url: "https://kyozaidukuru.github.io/hidden-kanji/",
-      desc: "□で隠された漢字を、少ないヒントで充てるゲームです。",
-      thumb: "thumb3.png"
-    },
-    {
-      title: "漢字パズル",
-      url: "https://kyozaidukuru.github.io/kanji_puzzle/",
-      desc: "バラバラになった漢字を正しく組み立てるゲームです。",
-      thumb: "thumb4.png"
-    }
-  ]
-},
+    category: "漢字",
+    items: [
+      {
+        title: "漢字のまど",
+        url: "https://kyozaidukuru.github.io/hidden-kanji/",
+        desc: "□で隠された漢字を、少ないヒントで充てるゲームです。",
+        thumb: "thumb3.png"
+      },
+      {
+        title: "漢字パズル",
+        url: "https://kyozaidukuru.github.io/kanji_puzzle/",
+        desc: "バラバラになった漢字を正しく組み立てるゲームです。",
+        thumb: "thumb4.png"
+      }
+    ]
+  },
   {
     category: "その他",
     items: [
-
       {
         title: "残り時間がみえる学習タイマー",
         url: "https://kyozaidukuru.github.io/timer/",
@@ -148,6 +151,7 @@ data.forEach(section => {
     link.textContent = item.title;
     link.className = "title";
     link.target = "_blank";
+    link.rel = "noopener noreferrer";
 
     const desc = document.createElement("div");
     desc.className = "desc";
